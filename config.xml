@@ -7,7 +7,9 @@
 		version   = "">
 		<name>EnteradoZ		</name>
 		<description>Juego para que los niños practiquen operaciones con los números enteros		</description>
-		<author href="" email="edwin8ud@gmail.com">Edwin Estiven Herrera Vasquez		</author>
+		<author href="" email="edwin8ud@gmail.com">Edwin Estiven Herrera Vasquez	
+		</author>
+		<content src="index.html" />
 		<feature name="http://api.phonegap.com/1.0/battery" />
 		<feature name="http://api.phonegap.com/1.0/camera" />
 		<feature name="http://api.phonegap.com/1.0/contacts" />
