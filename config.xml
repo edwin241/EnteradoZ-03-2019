@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.HerramientasEducativas.EnteradoZ"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+  <name>EnteradoZ</name>
+  <description>
+      Juego para pacticar 
+  </description>
+  <author href="https://build.phonegap.com" email="edwin8ud@gmail.com">
+      Edwin Estiven Herrera Vasquez
+  </author>
+
+  <!-- all platforms -->
+  <preference name="phonegap-version" value="cli-6.5.0" />
+  <preference name="orientation" value="landscape" />
+  <preference name="fullscreen" value="true" />
+
+  
+</widget>
+
