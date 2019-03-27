@@ -2,6 +2,7 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
 		id        = "com.HerramientasEducativas.EnteradoZ"
 		versionCode="1"
 		version   = "1.0.0">
@@ -9,6 +10,24 @@
 		<description>Juego para que los niños practiquen operaciones con los números enteros		</description>
 		<author href="" email="edwin8ud@gmail.com">Edwin Estiven Herrera Vasquez		</author>
 		
+=======
+		id     ="com.HerramientasEducativas.EntedradoZ"
+versionCode=""
+		version   = "">
+		<name>EnteradoZ		</name>
+		<description>Juego para que los niños practiquen operaciones con los números enteros		</description>
+		<author href="" email="edwin8ud@gmail.com">Edwin Estiven Herrera Vasquez	
+		</author>
+		<content src="index.html" />
+		<feature name="http://api.phonegap.com/1.0/battery" />
+		<feature name="http://api.phonegap.com/1.0/camera" />
+		<feature name="http://api.phonegap.com/1.0/contacts" />
+		<feature name="http://api.phonegap.com/1.0/file" />
+		<feature name="http://api.phonegap.com/1.0/geolocation" />
+		<feature name="http://api.phonegap.com/1.0/media" />
+		<feature name="http://api.phonegap.com/1.0/network" />
+		<feature name="http://api.phonegap.com/1.0/notification" />
+>>>>>>> e7683887d3d32349cb003853dbd45daec4de5360
 		<preference name="phonegap-version" value="cli-6.1.0" />
 		<preference name="android-build-tool" value="gradle" />
 		<preference name="orientation" value="default" />
@@ -50,5 +69,10 @@
 		</platform>
 		<platform name="winphone">
 		</platform>
+<<<<<<< HEAD
+		 <icon src="icono.png" />
+	
+=======
 		 <icon src="icono.png" />
 		</widget>
+>>>>>>> e7683887d3d32349cb003853dbd45daec4de5360
