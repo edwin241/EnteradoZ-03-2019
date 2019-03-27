@@ -2,20 +2,13 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
-		id        = "com.HerramientasEducativas"
-		versionCode=""
-		version   = "">
-		<name>EnteradoZ		</name>
+		id        = "com.HerramientasEducativas.EnteradoZ"
+		versionCode="1"
+		version   = "1.0.0">
+		<name>EnteradoZ</name>
 		<description>Juego para que los niños practiquen operaciones con los números enteros		</description>
 		<author href="" email="edwin8ud@gmail.com">Edwin Estiven Herrera Vasquez		</author>
-		<feature name="http://api.phonegap.com/1.0/battery" />
-		<feature name="http://api.phonegap.com/1.0/camera" />
-		<feature name="http://api.phonegap.com/1.0/contacts" />
-		<feature name="http://api.phonegap.com/1.0/file" />
-		<feature name="http://api.phonegap.com/1.0/geolocation" />
-		<feature name="http://api.phonegap.com/1.0/media" />
-		<feature name="http://api.phonegap.com/1.0/network" />
-		<feature name="http://api.phonegap.com/1.0/notification" />
+		
 		<preference name="phonegap-version" value="cli-6.1.0" />
 		<preference name="android-build-tool" value="gradle" />
 		<preference name="orientation" value="default" />
@@ -50,12 +43,12 @@
 		<platform name="ios">
 		</platform>
 		<platform name="android">
-		<icon src="file://C:\Users\ASUS\Documents\GitHub\EnteradoZ-03-2019\ico36x36.png" qualifier="ldpi" />
-		<icon src="file://C:\Users\ASUS\Documents\GitHub\EnteradoZ-03-2019\ico48x48.png" qualifier="mdpi" />
-		<icon src="file://C:\Users\ASUS\Documents\GitHub\EnteradoZ-03-2019\ico72x72.png" qualifier="hdpi" />
-		<icon src="file://C:\Users\ASUS\Documents\GitHub\EnteradoZ-03-2019\ico96x96.png" qualifier="xhdpi" />
+		<icon src="ico36x36.png" qualifier="ldpi" />
+		<icon src="ico48x48.png" qualifier="mdpi" />
+		<icon src="ico72x72.png" qualifier="hdpi" />
+		<icon src="ico96x96.png" qualifier="xhdpi" />
 		</platform>
 		<platform name="winphone">
 		</platform>
-		 <icon src="icon.png" />
+		 <icon src="icono.png" />
 		</widget>
