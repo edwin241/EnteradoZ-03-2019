@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EnteradoZ</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css"  />
+<link rel="stylesheet" href="fuente/Ravie/stylesheet2.css" />
+
+
+<script src="jquery-2.1.4.min.js"></script>
+<script src="js/mootools-yui-compressed.js">
+</script>
+ 
+<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+<style>
+
+ html,body, div[data-role ="page"] {
+           /* height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+ 
+         .ui-content{
+            /* height: 100%;*/
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+           /* border-style: solid;
+            border-color: chartreuse;
+            border-width: 5px;*/
+        }
+ 
+        #canvas {
+            /* height: 50%;*/
+            width: 40%;
+            padding: 0px;
+           /* border-style: solid;
+            border-color: crimson;
+            border-width: 10px;*/
+		}
+		#stage {
+            /* height:50%;*/
+            width: 40%;
+            padding: 0px;
+            /*border-style: solid;
+            border-color: crimson;
+          border-width: 10px;*/
+		}
+		#dialog {
+   background:#000;
+
+   position: absolute;
+   top: 25%;
+   margin-top: -50px; /* half the height */
+       }&#8203;
+		#panel-01{
+		 background: #7F8C8D;
+    color: #ECF0F1;
+			}
+.ui-icon-icono-menu { 
+  background-image : url(images/menuGris2.png); 
+background-size: 50px 50px;
+  
+}
+a{
+text-decoration:none;
+}
+			
+</style>
+
+</head>
+
+<body>
+<div data-role="page" data-theme="a">
+<div data-role="panel" id="panel-01" data-theme="b"> 
+    <ul data-role="listview" data-theme="d">
+    <li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+     <li data-role="list-divider">Menu</li> 
+    <li data-role="list-divider">Otras App</li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.MathWorm.juegocolombiatierraquerida">
+        <img src="images/colombiatq.png">
+        <h2>Colombia TQ</h2>
+        <p>Juego de Geograf&#205;a</p>
+        </a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.herramientaseducativas.edwin.escanerdecerebro"><img src="images/escaner.png">
+        <h2>Escaner</h2>
+        <p>Escanea tu cerebro</p>
+        </a></li>        
+       
+    <li data-icon="home"><a href="#creditos" >Creditos</a></li> 
+     <div data-role="collapsible" data-inset="false" data-iconpos="right" data-theme="d" data-content-theme="d">
+          <h3>Contactanos</h3>
+          <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+                         <h4><a href="https://www.facebook.com/edwin.herrera.315" >Facebook<img src="images/face20.png" style="padding-left:160px"></a></h4>
+               <h4><a href="https://www.instagram.com/edwin_herrera_v/">Instagram<img src="images/instagram20.png" style="padding-left:159px"></a></h4>
+               <h4><a href="https://twitter.com/Edwin_Herrera_V">Twiter<img src="images/twiter20.png" style="padding-left:187px"></a></h4>
+                <h4><a>Pagina Web<img src="images/icono_pagina20.png" style="padding-left:143px"></a></h4>
+             
+         </div>
+           </ul>       
+  </div> 
+
+<div data-role="header" >
+<a href="#panel-01" data-icon="grid" style="height:15px; padding-right:0px;"></a>
+<center>
+<img src="images/logo.png" alt="Low resolution logo"class="align-right"/>
+</center>
+</div>
+
+<div data-role="content" style="overflow:hidden; margin:0px; border:0px;  padding:0px;" >
+<div style=" overflow:hidden; margin-bottom:0px; margin-bottom:0px; padding-bottom:0px;">
+
+<img src="images/vidas1.png" alt="vidas" data-inline="true"/>
+<label class="vidas" data-inline="true" style="float:left; color:#0F9; font-family:Ravie; font-size:30px">  3  </label>
+
+<img src="images/nivel.png" alt="aciertos" data-inline="true" style="float:right"/>
+<label class="nivel" data-inline="true" style="float:right; color:#4764e5;
+font-family:Ravie; font-size:30px">  1  </label>
+ </div>
+<center>
+<canvas  class="canvas" id="canvas" width="600" height="250" style="margin-top:0px; border-top:0px;padding-top:0px;" > </canvas>
+<br>
+<canvas style="padding:10; border-radius: 49px 49px 49px 49px; border:10px solid black" id="stage" width="600" height="125"></canvas>
+ </center>
+
+<div class="botones" id="botones">
+<a data-role="button" data-theme="a" id="op1" class="op1" style=" background:#4764e5">Empezar</a>
+<a data-role="button" data-theme="a" id="op2" class="op2" style="background:#f0c208">Empezar</a>
+<a data-role="button" data-theme="a" id="op3" class="op3" style="background:#08f07b">Empezar</a><a data-role="button" data-theme="a" id="op4" class="op4" style="background:#f00808">Empezar</a>
+<a id='lnkDialog' href="#dialog" data-rel="dialog" data-transition="flip" data-overlay-theme="b" data-position-to="window" style="display:none;">dialogo</a>
+</div>
+</div>
+<div data-role="footer" data-theme="a"><h4>www.edwinherrera.com</h4></div>
+</div>
+
+<div data-role="page" id="main" style="background-color:#000">
+ 
+</div>
+<div data-role="page" id="dialog" style="background-color:#000">
+  <div data-role="header">
+    <h1>Juego Terminado</h1>
+  </div>    
+  <div data-role="content" id="text" style="background-color:#000">
+   <div class="subdiv">
+   <p id="parrafo1"></p>
+        <canvas id="MyCanvas1" width="600" height="200">
+  This browser or document mode doesn't support canvas object</canvas>
+          </div>
+ <p id="parrafo2">Has tenido 3 errores, sigue intentando</p>          
+  </div>    
+</div>
+
+<div data-role="page" id="main" style="background-color:#000">
+ 
+</div>
+
+
+
+<div data-role="page" id="creditos" style="background-color:#000">
+  <div data-role="header">
+    <h1>Creditos</h1>
+  </div>    
+  <div data-role="content" id="text" style="background-color:#000; color:#09F" >
+  <center>
+  <h1 style="color:#FFF">Dise&#241;o y progrmaci&#243;n:</h1>
+  <h2>Edwin Estiven Herrera V&#225;squez</h2>
+  <h4 style="color:#FFF">Matem&#225;tico</h4>
+  <h4 style="color:#FFF">Especialista en inform&#225;tica educativa</h4>
+  </center>
+  
+   <p>Esta aplicaci&#243;n no tiene ning&#250;n objetivo comercial, fue creada &#250;nicamente con fines educativos. Fue desarrollada utilizando la tecnolog&#237;a html5, CSS, JavaScript, PhoneGap. Una de las animaciones se logr&#243; con el tutorial "Create a Nice and Simple Explosion Effect in HTML5 Canvas".
+     </p>        
+  </div>    
+</div>
+
+
+
+<script src="js/raf-polyfill.js"></script>
+<script src="js/micodigo.js"></script>
+
+</body>
+
+
+</html>
